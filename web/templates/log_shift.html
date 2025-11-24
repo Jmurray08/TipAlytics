@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log a Shift</title>
+
+    <link href="{{url_for('static', filename='styles/style.css')}}" 
+    rel ="stylesheet" />
+</head>
+
+<body>
+
+    <h1> Log Your Shift</h1>
+    <p>Fill out the details below to record your shift.</p>
+
+    <form method="POST" action="/log-shift">
+
+        <h2>Shift Details</h2>
+
+        <label for="date">Date:</label>
+        <input type ="date" id="date" name="date" required>
+
+        <label for="shift_type">Shift Type:</label>
+        <select id=""shift_type" name="shift_type" required>
+            <option value="Morning">Morning</option>
+            <option value="Night">Night</option>
+            <option value="Double">Double</option>
+        </select>
+
+        <label for="in_time">Clock-in:</label>
+        <input type="text" id="in_time" name="in_time" placeholder="HH:MM" required>
+
+        <label for="out_time">Clock-out:</label>
+        <input type="text" id="out_time" name="out_time" placeholder="HH:MM" required>
+
+
+        <h3>Weather</h3>
+
+        <label for="low_temp">Low Temperature:</label>
+        <input type="number" id="low_temp" name="low_temp" min="0" max="130" required>
+
+        <label for="high_temp">High Temperature:</label>
+        <input type="number" id="high_temp" name="high_temp" min="0" max="130" required>
+
+        <label for="conditions">Weather Conditions:</label>
+        <select id="conditions" name="conditions" required>
+            <option value="Sunny">Sunny</option>
+            <option value="Rainy">Rainy</option>
+            <option value="Cloudy">Cloudy</option>
+            <option value ="Snow">Snow</option>
+        </select>
+
+        <h4>Tips</h4>
+
+        <label for="amount">Amount of Tips:</label>
+        <input type="number" id="amount" name="amount" min="0" max="10000" required>
+
+        <label for="spent">Amount Spent:</label>
+        <input type="number" id="spent" name="spent" min="0" max="10000" required>
+        <br>
+        <br>
+
+        <button type="submit">Log Shift</button>
+    </form>
+    
+</body>
+</html>
