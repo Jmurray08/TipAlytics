@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('templates', filename='log_shift.html')}}"
+    <title>Data Recorded</title>
+</head>
+<body>
+    <h1>Recent shift<h1>
+    <p>Shift Date: {{shift_date}}<br> <button><a>Edit</a></button>
+    Shift Type: {{shift_type}}<br> <button><a>Edit</a></button>
+    In Time: {{in_time}}<br> <button><a>Edit</a></button>
+    Out Time: {{out_time}}<br> <button><a>Edit</a></button>
+    Low Temp: {{low_temp}}<br> <button><a>Edit</a></button>
+    High Temp: {{high_temp}}<br> <button><a>Edit</a></button>
+    Conditions: {{conditions}}<br> <button><a>Edit</a></button>
+    Amount: {{amount}}<br> <button><a>Edit</a></button>
+    Spent: {{spent}}<br> <button><a>Edit</a></button>
+    </p>
+    
+</body>
+</html>

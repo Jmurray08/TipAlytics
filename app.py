@@ -93,7 +93,7 @@ def log_shift_submit():
     db.session.add_all([new_shift, new_weather, new_tips])
     db.session.commit()
 
-    return "Shift details logged successfully!"
+    return render_template('form_success.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    serve(app, host='0.0.0.0', port=8000)
