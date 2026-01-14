@@ -41,10 +41,17 @@ class Tips(db.Model):
 
     shift_id = db.Column(db.Integer, db.ForeignKey('shift.id'), nullable=False)
 
-@app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/view-shifts')
+def view_shifts():
+    return render_template('view-shifts.html')
+
+@app.route('/analytics')
+def analytics():
+    return render_template('analytics.html')
 
 @app.route('/log-shift', methods=['GET'])
 def log_shift_form():

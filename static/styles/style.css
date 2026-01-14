@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(135deg, #d7eaff 0%,#e3defd 50%, #f9e6ff 100%);
+    background: radial-gradient(circle, #212121 5%, #424242 20%, #616161 45%, #9e9e9e 70%, #c7c7c7 100%);
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -102,6 +102,26 @@ button:hover{
     to { opacity: 1; transform: translateY(0px); }
 }
 
+.Menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.Menu li{
+    float: center;
+}
+.Menu li a{
+    display: list-item;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
 
 
